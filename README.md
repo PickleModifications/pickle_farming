@@ -16,8 +16,8 @@ With this resource, you will be able to do the following:
 - Grow 10+ Different Types of Plants.
 - Sync Growth Smoothly.
 - Water Plants to Grow Them.
-- Process Plants (Multi-step is possible)
-- Sell Plants
+- Process Plants (Multi-step is possible).
+- Sell Plants.
 
 ## Supported Frameworks
 
