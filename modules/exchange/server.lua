@@ -34,7 +34,7 @@ function ExchangeItems(source, index)
         for i=1, #exchangeItems do 
             local item = exchangeItems[i]
             local amount = (item.min < item.max and math.random(item.min, item.max) or item.min)
-            RemoveItem(source, item.remove, item.amount * amount)
+            RemoveItem(source, item.remove, item.amount)
             AddItem(source, item.name, item.amount * amount)
         end
         return true
