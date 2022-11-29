@@ -14,7 +14,7 @@ function Search(source, name)
     local xPlayer = QBCore.Functions.GetPlayer(source)
     local item = xPlayer.Functions.GetItemByName(name)
     if item ~= nil then 
-        return item.amount
+        return item.amount 
     else
         return 0
     end
