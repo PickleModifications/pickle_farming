@@ -7,7 +7,7 @@ function ShowNotification(text)
 end
 
 function ShowHelpNotification(text)
-    AddTextEntry('qbHelpNotification', msg)
+    AddTextEntry('qbHelpNotification', text)
     BeginTextCommandDisplayHelp('qbHelpNotification')
     EndTextCommandDisplayHelp(0, false, false, -1)
 end
