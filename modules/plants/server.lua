@@ -108,6 +108,7 @@ RegisterCallback("pickle_farming:waterPlant", function(source, cb, key)
                 Plants[key].water = newWater
                 UpdatePlants()
             end)
+                RemoveItem(source, "garden_pitcher", 1)
             cb(true)
         else
             ShowNotification(source, "You need to have a gardening pitcher.")
