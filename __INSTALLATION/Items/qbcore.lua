@@ -1,275 +1,32 @@
-['corn_seed'] = {
-    type = "item",
-    label = 'Corn Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows corn."
-},
-
-['corn_raw'] = {
-    type = "item",
-    label = 'Raw Corn',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['corn'] = {
-    type = "item",
-    label = 'Corn',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['tomato_seed'] = {
-    type = "item",
-    label = 'Tomato Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows a tomato."
-},
-
-['tomato_raw'] = {
-    type = "item",
-    label = 'Raw Tomato',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['tomato'] = {
-    type = "item",
-    label = 'Tomato',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['wheat_seed'] = {
-    type = "item",
-    label = 'Wheat Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows Wheat."
-},
-
-['wheat_raw'] = {
-    type = "item",
-    label = 'Raw Wheat',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['wheat'] = {
-    type = "item",
-    label = 'Wheat',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['broccoli_seed'] = {
-    type = "item",
-    label = 'Broccoli Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows broccoli."
-},
-
-['broccoli_raw'] = {
-    type = "item",
-    label = 'Raw Broccoli',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['broccoli'] = {
-    type = "item",
-    label = 'Broccoli',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['carrot_seed'] = {
-    type = "item",
-    label = 'Carrot Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows a carrot."
-},
-
-['carrot_raw'] = {
-    type = "item",
-    label = 'Raw Carrot',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['carrot'] = {
-    type = "item",
-    label = 'Carrot',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['potato_seed'] = {
-    type = "item",
-    label = 'Potato Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows a potato."
-},
-
-['potato_raw'] = {
-    type = "item",
-    label = 'Raw Potato',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['potato'] = {
-    type = "item",
-    label = 'Potato',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['pickle_seed'] = {
-    type = "item",
-    label = 'Pickle Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows a pickle."
-},
-
-['pickle_raw'] = {
-    type = "item",
-    label = 'Raw Pickle',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['pickle'] = {
-    type = "item",
-    label = 'Pickle',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['weed_seed'] = {
-    type = "item",
-    label = 'Weed Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows weed."
-},
-
-['weed_raw'] = {
-    type = "item",
-    label = 'Raw Weed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['weed'] = {
-    type = "item",
-    label = 'Weed',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['cocaine_seed'] = {
-    type = "item",
-    label = 'Cocaine Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows cocaine."
-},
-
-['cocaine_raw'] = {
-    type = "item",
-    label = 'Raw Cocaine',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['cocaine'] = {
-    type = "item",
-    label = 'Cocaine',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['heroin_seed'] = {
-    type = "item",
-    label = 'Heroin Seed',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "This is a seed that grows heroin."
-},
-
-['heroin_raw'] = {
-    type = "item",
-    label = 'Raw Heroin',
-    weight = 1,
-    stack = true,
-    close = true,
-    description = "You will need to process this."
-},
-
-['heroin'] = {
-    type = "item",
-    label = 'Heroin',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['garden_pitcher'] = {
-    type = "item",
-    label = 'Garden Pitcher',
-    weight = 1,
-    stack = true,
-    close = true,
-},
-
-['garden_shovel'] = {
-    type = "item",
-    label = 'Garden Shovel',
-    weight = 1,
-    stack = true,
-    close = true,
-},
+["corn_seed"] 							= {["name"] = "corn_seed",  	     		["label"] = "Corn Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "corn_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["corn_raw"] 							= {["name"] = "corn_raw",  	     		["label"] = "Raw Corn",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "corn_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["corn"] 							= {["name"] = "corn",  	     			["label"] = "Corn",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "corn.png", 					["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["tomato_seed"] 						= {["name"] = "tomato_seed",  	     		["label"] = "Tomato Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "tomato_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["tomato_raw"] 							= {["name"] = "tomato_raw",  	     		["label"] = "Tomato Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "tomato_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["tomato"] 							= {["name"] = "tomato",  	     		["label"] = "Tomato",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "tomato.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["wheat_seed"] 							= {["name"] = "wheat_seed",  	     		["label"] = "Wheat Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "wheat_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["wheat_raw"] 							= {["name"] = "wheat_raw",  	     		["label"] = "Wheat Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "wheat_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["wheat"] 							= {["name"] = "wheat",  	     		["label"] = "Wheat",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "wheat.png", 					["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["broccoli_seed"] 						= {["name"] = "broccoli_seed",  	     	["label"] = "Broccoli Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "broccoli_seed.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["broccoli_raw"] 						= {["name"] = "broccoli_raw",  	     		["label"] = "Broccoli Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "broccoli_raw.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["broccoli"] 							= {["name"] = "broccoli",  	     		["label"] = "Broccoli",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "broccoli.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["carrot_seed"] 						= {["name"] = "carrot_seed",  	     		["label"] = "Carrot Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "carrot_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["carrot_raw"] 							= {["name"] = "carrot_raw",  	     		["label"] = "Carrot Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "carrot_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["carrot"] 							= {["name"] = "carrot",  	     		["label"] = "Carrot",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "carrot.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["potato_seed"] 						= {["name"] = "potato_seed",  	     		["label"] = "Potato Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "potato_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["potato_raw"] 							= {["name"] = "potato_raw",  	     		["label"] = "Potato Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "potato_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["potato"] 							= {["name"] = "potato",  	     		["label"] = "Potato",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "potato.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["pickle_seed"] 						= {["name"] = "pickle_seed",  	     		["label"] = "Pickle Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "pickle_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["pickle_raw"] 							= {["name"] = "pickle_raw",  	     		["label"] = "Pickle Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "pickle_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["pickle"] 							= {["name"] = "pickle",  	     		["label"] = "Pickle",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "pickle.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["weed_seed"] 							= {["name"] = "weed_seed",  	     		["label"] = "Weed Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "weed_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["weed_raw"] 							= {["name"] = "weed_raw",  	     		["label"] = "Weed Raw",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "weed_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["weed"] 							= {["name"] = "weed",  	     			["label"] = "Weed",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "weed.png", 					["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["cocaine_seed"] 						= {["name"] = "cocaine_seed",  	     		["label"] = "Cocaine Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "cocaine_seed.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["cocaine_raw"] 						= {["name"] = "cocaine_raw",  	     		["label"] = "Cocaine Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "cocaine_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["cocaine"] 							= {["name"] = "cocaine",  	     		["label"] = "Cocaine",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "cocaine.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["heroin_seed"] 						= {["name"] = "heroin_seed",  	     		["label"] = "Heroin Seed",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "heroin_seed.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["heroin_raw"] 							= {["name"] = "heroin_raw",  	     		["label"] = "Heroin Raw",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "heroin_raw.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["heroin"] 							= {["name"] = "heroin",  	     		["label"] = "Heroin",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "heroin.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["garden_pitcher"] 						= {["name"] = "garden_pitcher",  	     	["label"] = "Garden Pitcher",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "garden_pitcher.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["garden_shovel"] 						= {["name"] = "garden_shovel",  	     	["label"] = "Garden Shovel",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "garden_shovel.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
