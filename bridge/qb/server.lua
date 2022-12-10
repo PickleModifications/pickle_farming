@@ -22,7 +22,7 @@ end
 
 function AddItem(source, name, amount)
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    if name == "money" then 
+    if name == "money" or name == "cash" then 
         return xPlayer.Functions.AddMoney(amount)
     else
         return xPlayer.Functions.AddItem(name, amount)
