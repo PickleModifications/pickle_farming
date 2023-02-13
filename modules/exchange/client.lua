@@ -29,17 +29,17 @@ end
 
 function ExchangeRequest(index)
     ServerCallback("pickle_farming:exchangeProcess", function(result)
-        if result then 
-            if (Config.Exchange[index].Type == "Process") then 
-                ShowNotification("Successfuly processed item.")
-            elseif (Config.Exchange[index].Type == "Exchange") then 
-                ShowNotification("Successfuly exchanged item(s).")
+        if result then
+            if (Config.Exchange[index].Type == "Process") then
+                ShowNotification(_L("success_process_item"))
+            elseif (Config.Exchange[index].Type == "Exchange") then
+                ShowNotification(_L("success_exchanged_item"))
             end
         else
-            if (Config.Exchange[index].Type == "Process") then 
-                ShowNotification("You don't have any items to process.")
-            elseif (Config.Exchange[index].Type == "Exchange") then 
-                ShowNotification("You don't have any items to exchange.")
+            if (Config.Exchange[index].Type == "Process") then
+                ShowNotification(_L("doesnt_have_enough_item_to_process"))
+            elseif (Config.Exchange[index].Type == "Exchange") then
+                ShowNotification(_L("doesnt_have_any_items_exchange"))
             end
         end
     end, index)
@@ -58,7 +58,7 @@ function InteractExchange(index)
             if success then 
                 ExchangeRequest(index)
             else
-                ShowNotification("Failed to process item.")
+                ShowNotification(_L("failed_process_item"))
             end
         else
             Wait(1000 * Config.ExchangeSettings.ProcessTime)
@@ -71,37 +71,37 @@ function InteractExchange(index)
         ExchangeRequest(index)
         Interact = false 
     else
-        dprint("Invalid type: ", data.Type)    
+        dprint("Invalid type: ", data.Type)
         Interact = false
     end
 end
 
 function ShowExchangeInteract(index)
-    if (Config.Exchange[index].Type == "Process") then 
-        ShowHelpNotification("Press ~INPUT_CONTEXT~ to process your plants.")
-    elseif (Config.Exchange[index].Type == "Exchange") then 
-        ShowHelpNotification("Press ~INPUT_CONTEXT~ to exchange your items.")
+    if (Config.Exchange[index].Type == "Process") then
+        ShowHelpNotification(_L("process_your_plants"))
+    elseif (Config.Exchange[index].Type == "Exchange") then
+        ShowHelpNotification(_L("exchange_your_items"))
     end
 end
 
 CreateThread(function()
-    while true do 
+    while true do
         local wait = 1000
         local ped = PlayerPedId()
         local pcoords = GetEntityCoords(ped)
-        for i=1, #Config.Exchange do 
+        for i=1, #Config.Exchange do
             local data = Config.Exchange[i]
             local coords = v3(data.Location)
             local dist = #(pcoords - coords)
             local npc = GetLocalNPC(i)
-            if dist < Config.ExchangeSettings.RenderDistance then 
+            if dist < Config.ExchangeSettings.RenderDistance then
                 wait = 0
-                if (data.NPCModel) then 
-                    if not npc then 
+                if (data.NPCModel) then
+                    if not npc then
                         CreateLocalNPC(i)
-                    end 
+                    end
                 end
-                if (dist < 1.5 and not ShowExchangeInteract(i) and IsControlJustPressed(1, 51)) then 
+                if (dist < 1.5 and not ShowExchangeInteract(i) and IsControlJustPressed(1, 51)) then
                     InteractExchange(i)
                 end
             elseif data.NPCModel and npc then
@@ -114,9 +114,9 @@ end)
 
 CreateThread(function()
     Wait(1000)
-    for i=1, #Config.Exchange do 
+    for i=1, #Config.Exchange do
         local v = Config.Exchange[i]
-        if (v.Blip) then 
+        if (v.Blip) then
             local data = v.Blip
             data.Location = v3(v.Location)
             CreateBlip(data)
