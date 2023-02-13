@@ -11,5 +11,7 @@ Language["fr"] = {
     need_to_have_gardening_pitcher = "Vous devez avoir un arrosoir de jardinage.",
     need_to_have_gardening_shovel = "Vous devez avoir une pelle de jardinage.",
     water_the_plant = "Appuyez sur ~INPUT_CONTEXT~ pour arroser la plante",
-    harvest_the_plant = "Appuyez sur ~INPUT_CONTEXT~ pour récolter la plante."
+    harvest_the_plant = "Appuyez sur ~INPUT_CONTEXT~ pour récolter la plante.",
+    planted_seed = "Graine plantée.",
+    cant_plant_here = "Vous ne pouvez pas planter cette graine ici."
 }

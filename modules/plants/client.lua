@@ -68,13 +68,13 @@ function CreatePlant(seed)
                 ClearPedTasks(ped)
                 FreezeEntityPosition(ped, false)
                 Interact = false
-                ShowNotification("Planted seed.")
+                ShowNotification(_L("planted_seed"))
             end
             Interact = false
         end, seed, coords)
     else
         dprint("FAILED TO PLANT: ", seed)
-        ShowNotification("You can't plant this seed here.")
+        ShowNotification(_L("cant_plant_here"))
         Interact = false
     end
 end

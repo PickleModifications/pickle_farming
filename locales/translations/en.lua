@@ -11,5 +11,7 @@ Language["en"] = {
     need_to_have_gardening_pitcher = "You need to have a gardening pitcher.",
     need_to_have_gardening_shovel = "You need to have a gardening shovel.",
     water_the_plant = "Press ~INPUT_CONTEXT~ to water the plant",
-    harvest_the_plant = "Press ~INPUT_CONTEXT~ to harvest the plant."
+    harvest_the_plant = "Press ~INPUT_CONTEXT~ to harvest the plant.",
+    planted_seed = "Planted seed.",
+    cant_plant_here = "You can't plant this seed here."
 }
