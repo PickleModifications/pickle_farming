@@ -1,5 +1,7 @@
 Config = {}
 
+Config.Language = "en"
+
 Config.Debug = true
 
 Config.Plant = {

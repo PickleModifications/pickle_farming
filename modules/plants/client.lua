@@ -15,13 +15,13 @@ function IsPlantable(seed)
     local ped = PlayerPedId()
     local pcoords = GetEntityCoords(ped)
     local coords, heading = v3(GetPlayerOffset(seed))
-    if cfg.Materials and #cfg.Materials > 0 then 
+    if cfg.Materials and #cfg.Materials > 0 then
         local ray = StartShapeTestRay(pcoords, coords, 17, ped, 7)
         local _, hit, endCoords, surfaceNormal, materialHash, entity = GetShapeTestResultIncludingMaterial(ray)
         dprint("ATTEMPT PLANT: ", seed, "Material: ", materialHash)
         if hit then 
             local found = false
-            for i=1, #cfg.Materials do 
+            for i=1, #cfg.Materials do
                 local material = cfg.Materials[i]
                 if type(material) == "number" and materialHash == material then
                     found = true
@@ -31,22 +31,22 @@ function IsPlantable(seed)
                     break
                 end
             end
-            if found then 
+            if found then
                 return true
             end
         end 
     end
-    if cfg.Zones and #cfg.Zones > 0 then 
+    if cfg.Zones and #cfg.Zones > 0 then
         local found = false
-        for i=1, #cfg.Zones do 
+        for i=1, #cfg.Zones do
             local zcoord, max_dist = v3(cfg.Zones[i])
             local dist = #(coords - zcoord)
-            if dist < max_dist then 
+            if dist < max_dist then
                 found = true
                 break
             end
         end
-        if found then 
+        if found then
             return true
         end
     end
@@ -59,8 +59,8 @@ function CreatePlant(seed)
     local cfg = Config.Seeds[seed]
     local coords, heading = v3(GetPlayerOffset(seed))
     if (IsPlantable(seed)) then 
-        ServerCallback("pickle_farming:createPlant", function(result) 
-            if result then 
+        ServerCallback("pickle_farming:createPlant", function(result)
+            if result then
                 local ped = PlayerPedId()
                 FreezeEntityPosition(ped, true)
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_GARDENER_PLANT", 0, 1)
@@ -68,13 +68,13 @@ function CreatePlant(seed)
                 ClearPedTasks(ped)
                 FreezeEntityPosition(ped, false)
                 Interact = false
-                ShowNotification("Planted seed.") 
+                ShowNotification(_L("planted_seed"))
             end
             Interact = false
         end, seed, coords)
     else
         dprint("FAILED TO PLANT: ", seed)
-        ShowNotification("You can't plant this seed here.") 
+        ShowNotification(_L("cant_plant_here"))
         Interact = false
     end
 end
@@ -93,11 +93,11 @@ function CreateLocalPlant(key)
         local waterPercent = data.water / cfg.WaterNeeded
         local offset = v3(data.coords) + lerp(vector3(0.0, 0.0, 0.0), v3(cfg.Prop.Offsets.End), waterPercent)
         SetEntityCoords(obj, offset.x, offset.y, offset.z, 0.0, 0.0, 0.0, false)
-        
+
         while LocalPlants[key] and GlobalState.Plants[key] do 
             local data = GlobalState.Plants[key]
             local wait = 1000
-            if lastValue ~= data.water then 
+            if lastValue ~= data.water then
                 Interact = true
                 lastValue = data.water
                 local startCoords = GetEntityCoords(LocalPlants[key].object)
@@ -118,7 +118,7 @@ function CreateLocalPlant(key)
 end
 
 function DestroyLocalPlant(key)
-    if LocalPlants[key] then 
+    if LocalPlants[key] then
         DeleteEntity(LocalPlants[key].object)
         LocalPlants[key] = nil
     end
@@ -141,9 +141,9 @@ function InteractPlant(key)
     local data = GlobalState.Plants[key]
     local cfg = Config.Seeds[data.seed]
     local percent = math.floor((data.water / cfg.WaterNeeded) * 100)
-    if percent >= 100 then 
+    if percent >= 100 then
         ServerCallback("pickle_farming:harvestPlant", function(result)
-            if (result) then 
+            if (result) then
                 local ped = PlayerPedId()
                 FreezeEntityPosition(ped, true)
                 TaskStartScenarioInPlace(ped, "WORLD_HUMAN_GARDENER_PLANT", 0, 1)
@@ -154,10 +154,10 @@ function InteractPlant(key)
             else
                 Interact = false
             end
-        end, key) 
+        end, key)
     else
         ServerCallback("pickle_farming:waterPlant", function(result)
-            if (result) then 
+            if (result) then
                 local ped = PlayerPedId()
                 local coords = GetEntityCoords(ped)
                 local can = CreateObject(`prop_wateringcan`, coords.x, coords.y, coords.z, true, true, true)
@@ -178,7 +178,7 @@ function InteractPlant(key)
             else
                 Interact = false
             end
-        end, key) 
+        end, key)
     end
 end
 
@@ -186,31 +186,31 @@ function ShowPlantInteract(key)
     local data = GlobalState.Plants[key]
     local cfg = Config.Seeds[data.seed]
     local percent = math.floor((data.water / cfg.WaterNeeded) * 100)
-    if percent < 100 then 
-        ShowHelpNotification("Press ~INPUT_CONTEXT~ to water the plant (".. percent .."%).")
+    if percent < 100 then
+        ShowHelpNotification(_L("water_the_plant") .. " (".. percent .."%).")
     else
-        ShowHelpNotification("Press ~INPUT_CONTEXT~ to harvest the plant.")
+        ShowHelpNotification(_L("harvest_the_plant"))
     end
 end
 
 CreateThread(function()
-    while true do 
+    while true do
         local wait = 1000
         local Plants = GlobalState.Plants
         local pcoords = GetEntityCoords(PlayerPedId())
-        for k,v in pairs(Plants) do 
+        for k,v in pairs(Plants) do
             local coords = GetPlantCoords(k)
             local dist = #(coords - pcoords)
             local plant = GetLocalPlant(k)
-            if (dist < Config.Plant.RenderDistance) then 
+            if (dist < Config.Plant.RenderDistance) then
                 wait = 0
-                if (not plant) then 
+                if (not plant) then
                     CreateLocalPlant(k)
                 end
-                if (not Interact and dist < 1.5 and not ShowPlantInteract(k) and IsControlJustPressed(1, 51)) then 
+                if (not Interact and dist < 1.5 and not ShowPlantInteract(k) and IsControlJustPressed(1, 51)) then
                     InteractPlant(k)
                 end
-            elseif (plant) then 
+            elseif (plant) then
                 DestroyLocalPlant(k)
             end
         end
@@ -230,7 +230,7 @@ AddEventHandler('onResourceStop', function(resourceName)
     if (GetCurrentResourceName() ~= resourceName) then
       return
     end
-    for k,v in pairs(LocalPlants) do 
+    for k,v in pairs(LocalPlants) do
         DestroyLocalPlant(k)
     end
 end)
