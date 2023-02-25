@@ -40,7 +40,7 @@ function CanPlayerPlant(source, seed, coords)
     if Search(source, seed) < 1 then
         return false, _L("doesnt_have_this_seed")
     elseif playerPlants + 1 > Config.Plant.MaxPlayerPlants then
-        return false, _L("too_many_plants_active") .. " " .. ("..playerPlants.."/"..Config.Plant.MaxPlayerPlants..")."
+        return false,  _L("too_many_plants_active").. ("..playerPlants.."/"..Config.Plant.MaxPlayerPlants..")
     else
         return true
     end
